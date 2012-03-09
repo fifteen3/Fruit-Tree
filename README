@@ -1,0 +1,10 @@
+In order to execute call:
+
+var tree = getFruitTree(3,'apple'),
+	apple1 = tree.pick(),
+	apple2 = tree.pick(),
+	apple3 = tree.pick();
+
+apple1.eat(); //mmm, good apple
+apple1.eat(); //all gone. already ate apple
+
