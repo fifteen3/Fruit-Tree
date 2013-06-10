@@ -4,8 +4,8 @@
  * @param {String} type The type will be the type of fruit the tree provides
  * @return {Object} returns a fruit tree of the type provided
  */
-var getFruitTree = function (yield, type) {
-    var fruits = fruits || 3,
+var getFruitTree = function (tree_yield, type) {
+    var fruits = tree_yield || 3,
         /**
          * Create fruit for the tree
          * @param {String} the type of fruit to create
@@ -17,7 +17,7 @@ var getFruitTree = function (yield, type) {
                 getType : function() {
                     return type;
                 },
-                eat  :  function(){
+                eat  :  function() {
                     if (!eaten) {
                         eaten = true;
                         console.log('mmm, good ' + type);
@@ -37,7 +37,7 @@ var getFruitTree = function (yield, type) {
                 console.log('no more ' + type);
                 return null;
             }
-            fruits--;
+            fruits = fruits - 1;
             return fruitMaker(type);
         };
 
